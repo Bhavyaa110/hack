@@ -1,0 +1,269 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar {
+    background-color: #b22222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #8b0000;
+}
+
+.sliding-bar-container {
+    background-color: #8b0000;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.sliding-bar {
+    display: inline-block;
+    animation: slide 15s linear infinite;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap;
+    padding-left: 100%;
+}
+
+@keyframes slide {
+    0% { transform: translateX(100%); }
+    50% { transform: translateX(-10%); }
+    100% { transform: translateX(-100%); }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 50px); /* Adjust this based on the height of your navbar */
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+.profile {
+    width: 250px;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #b22222;
+}
+
+.profile h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #b22222;
+}
+
+.profile p {
+    font-size: 18px;
+    color: #666;
+}
+
+#products, #cart {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    width: calc(33.333% - 20px);
+    height: 180px;
+    background-color: #f8d7da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    text-align: center;
+    color: #b22222;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product:hover {
+    background-color: #df5050;
+    transform: scale(1.05);
+}
+
+h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Style for the quantity paragraph */
+p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style for the quantity input */
+input {
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Style for the add to cart button */
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Add hover effect for the button */
+button:hover {
+    background-color: #218838;
+}
+
+.sport:hover {
+    background-color: #df5050;
+}
+
+@media (max-width: 768px) {
+    .sport {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile {
+        width: 100%;
+        border-right: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+    .sports {
+        width: 100%;
+        justify-content: center;
+    }
+    .sport {
+        width: 100%;
+    }
+}
+
+#order {
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* Pushes it to the bottom */
+    padding: 20px;
+    background-color: #f8d7da;
+    border-top: 2px solid #b22222;
+}
+/* Existing CSS code */
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    animation: fadeIn 0.5s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.modal button:hover {
+    background-color: #218838;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Out of stock style */
+.product.out-of-stock {
+    background-color: #cccccc;
+    color: #999999;
+    border-color: #999999;
+    text-decoration: line-through;
+}

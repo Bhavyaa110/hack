@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Information Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        Sports Center
+    </div>
+    
+    <div class="sliding-bar-container">
+        <div class="sliding-bar">
+            Thapar Institute of Engineering and Technology
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="container">
+            <div class="profile">
+                <img src="WhatsApp Image 2024-06-26 at 00.23.48_b6d5cff2.jpg" alt="Profile Picture">
+                <h2 id="profile-name">Aditya Kumar</h2>
+                <p id ="roll">102303556</p>
+                <p id ="bh">COPC</p>
+            </div>
+            <div id="products">
+                <!-- Product details will be added here -->
+            </div>
+        </div>
+        <div id="order">
+            <h2>ORDER</h2>
+            <div id="cart">
+                <!-- Cart details will be added here -->
+                <div class="button-container">
+                    <button class="remove-button">Remove</button>
+                    <button class="submit-button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dialog -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter your name</h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="number" id ="rollno" placeholder="Your rollno">
+            <input type="text" id="branch" placeholder="Your branch">
+            <input type="email" id="email" placeholder="Your Email">
+            <button onclick="updateName()">Submit</button>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="cart.js"></script>
+</body>
+</html>
